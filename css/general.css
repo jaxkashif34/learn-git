@@ -1,0 +1,23 @@
+@keyframes colorChange {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  75% {
+    background-color: green;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+body {
+  animation-name: colorChange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
