@@ -1,3 +1,4 @@
+(SCI = Source Control Icon), (HD = Horizontal Dots)
 ************Git for Professionals notes**************
 1) Its is a bad thing to change multiple files and push them into remote
 2) the smaller the change in git the better it is for future ourselves and other colleagues
@@ -25,13 +26,15 @@ we can also see the inline view changes by going into version control icon ->
 this is for if we want to add a code that we want to add in the previous or last commit 
 but we commit the changes then git amend is used
 
+we can use this by doing the desire changes and then add them to the staging and then
+navigate to SCI -> HD -> commit -> Commit (Amend)
+
 (TEST text I'm adding to test the git commit --amend)
 
 
 ************Undo Last Commit (git update-ref)**************
 there might be a time you commit accidentally or too early and you want to undo it
 (TEST line I'm adding too early and commit it also to test the git update-ref with vs code)
-(SCI = Source Control Icon), (HD = Horizontal Dots)
 SCI -> HD -> commit -> undo last commit
 
 
@@ -41,3 +44,7 @@ if we commit several times and want to revert the several commits earlier then w
 
 now I'm will add three commits to test how rollback works in vs code
 TEST 1st commit
+TEST 2st commit
+TEST 3st commit
+
+we can rollback commits by continuously doing undo last commit 
