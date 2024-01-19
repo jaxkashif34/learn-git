@@ -1,0 +1,4 @@
+1) Its is a bad thing to change multiple files and push them into remote
+2) the smaller the change in git the better it is for future ourselves and other colleagues
+3) we can also add some changed part of file into commit and leave the rest part of the 
+change for future commit
