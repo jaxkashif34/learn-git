@@ -1,4 +1,29 @@
+************Git for Professionals notes**************
 1) Its is a bad thing to change multiple files and push them into remote
 2) the smaller the change in git the better it is for future ourselves and other colleagues
 3) we can also add some changed part of file into commit and leave the rest part of the 
 change for future commit
+
+
+************Meaning of vertical lines in gutter section**************
+
+so If you notice that on the left hand side of the current opened file in the gutter 
+section (right side of line numbers) you can possible see three different colored vertical lines
+if line if green its means that new line is add which is not in last commit
+if line is shaded blue its means that line is modified
+if you see a red > arrow head its mean line is remove which is in last commit
+(you can test it by doing your self)
+
+************Inline View Changes**************
+
+we can also see the inline view changes by going into version control icon -> 
+(the file you want to see the changes) -> click on three horizontal dots top right side
+-> inline View
+
+************Git Amend (something I want to add in the last commit)**************
+
+this is for if we want to add a code that we want to add in the previous or last commit 
+but we commit the changes then git amend is used
+
+(this is the test text I'm adding to test the git commit --amend)
+

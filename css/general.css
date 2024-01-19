@@ -1,4 +1,4 @@
-@keyframes colorChange {
+@keyframes colorShifting {
   0% {
     background-color: red;
   }
@@ -17,7 +17,7 @@
 }
 
 body {
-  animation-name: colorChange;
+  animation-name: colorShifting;
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
