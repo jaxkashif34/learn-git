@@ -33,3 +33,11 @@ there might be a time you commit accidentally or too early and you want to undo 
 (TEST line I'm adding too early and commit it also to test the git update-ref with vs code)
 (SCI = Source Control Icon), (HD = Horizontal Dots)
 SCI -> HD -> commit -> undo last commit
+
+
+************Rollback to Previous Commit (git update-ref)**************
+
+if we commit several times and want to revert the several commits earlier then we use it
+
+now I'm will add three commits to test how rollback works in vs code
+TEST 1st commit
