@@ -48,3 +48,10 @@ TEST 2st commit
 TEST 3st commit
 
 we can rollback commits by continuously doing undo last commit 
+
+************Discard Changes (git clean)**************
+
+git clean: cleans the working tree by recursively removing the files that are not 
+under version control and that refer as discarding in vs code
+
+SCI -> (clicked on untracked file) -> Discard Changes
