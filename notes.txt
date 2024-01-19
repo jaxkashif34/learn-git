@@ -20,10 +20,16 @@ we can also see the inline view changes by going into version control icon ->
 (the file you want to see the changes) -> click on three horizontal dots top right side
 -> inline View
 
-************Git Amend (something I want to add in the last commit)**************
+************Git Amend (git commit --amend) (something I want to add in the last commit)**************
 
 this is for if we want to add a code that we want to add in the previous or last commit 
 but we commit the changes then git amend is used
 
-(this is the test text I'm adding to test the git commit --amend)
+(TEST text I'm adding to test the git commit --amend)
 
+
+************Undo Last Commit (git update-ref)**************
+there might be a time you commit accidentally or too early and you want to undo it
+(TEST line I'm adding too early and commit it also to test the git update-ref with vs code)
+(SCI = Source Control Icon), (HD = Horizontal Dots)
+SCI -> HD -> commit -> undo last commit
