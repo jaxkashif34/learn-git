@@ -21,3 +21,9 @@ body {
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+
+.container {
+  animation-name: colorShifting;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
