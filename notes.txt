@@ -46,6 +46,9 @@ and even applying stashes all of these action perform some kind of integrations
 Question : when exactly do conflicts occurs?
 Answer : most of the time git figures it out on its own!
 
+Warnings: Do NOT use rebase on commits that you've already pushed/shared on a remote repository
+Instead, use it for cleaning up your local commit history before merging it into a shared team branch
+
 
 
 ************Meaning of vertical lines in gutter section**************
