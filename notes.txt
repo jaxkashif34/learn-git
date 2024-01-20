@@ -1,9 +1,51 @@
 (SCI = Source Control Icon), (HD = Horizontal Dots)
+* : For Main Heading
+# : For Sub Heading
+
 ************Git for Professionals notes**************
 1) Its is a bad thing to change multiple files and push them into remote
 2) the smaller the change in git the better it is for future ourselves and other colleagues
 3) we can also add some changed part of file into commit and leave the rest part of the 
-change for future commit
+change for future commit 
+HERE IS HOW WE CAN DO THAT (git add -p index.html)
+(:hunks are basically different part of the changes in file we can see that by running 
+git diff filepath)
+what will happened is git will steps through every (patches | hunks | chunk) of the file with us and 
+it asks us do you want to add that patch into staging yes | no | edit | skip | others
+
+by doing this we can create a valuable commit for future ourselves and other colleagues
+
+##### Branching Strategies #####
+
+In case of branching git will only provides you the tools of handling the branches 
+but won't help you it completely depends on (team size, team structure, many others)
+
+one popular GitFlow is 
+
+A master or main branch which is usually a production branch 
+A develop branch which is a staging branch which can be merged into the master branch after testing
+A feature branches which are created and merge into the develop
+
+
+************Pull Request (communicating about and reviewing the code)**************
+
+without the PR you would jump right to merging you code into the main branch
+A PR invites reviewers to provide feedback before merging and this exactly a PR made for
+
+
+
+************Merge Conflicts**************
+
+1) when they might occur
+2) what they actually are
+3) How to solve them
+
+conflicts can also happened when rebasing, interactive rebasing, merging, cherry-pick, pull 
+and even applying stashes all of these action perform some kind of integrations
+
+Question : when exactly do conflicts occurs?
+Answer : most of the time git figures it out on its own!
+
 
 
 ************Meaning of vertical lines in gutter section**************
