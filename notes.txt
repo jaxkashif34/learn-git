@@ -170,5 +170,28 @@ new commit at the tip of the main branch its kind of hybrid approach
           -----------------------(A) --> (B) --> (C)     ===> feature Branch
 
 
-so if we need the latest code into new branch then when should i do need to create a branch before rebasing the previous branch or after rebasing the 
-steps to rebase essentially if we are working within a team
+Question: Professionals steps to do merge, rebase and squash ?
+Answer: 1) git fetch origin main-branch
+        2) git checkout feature-branch
+        3) git rebase main-branch
+        4) git push origin features (--force or --force-with-lease "to be safer")
+        (git push --force-with-lease will only force push if your local copy of the remote branch is up-to-date)
+        
+one solution is cherry-pick (will test later) if want the latest code from previous
+what are the steps I would follow in future If I face the same scenario again like want code from previous
+
+Question: what is the difference between git fetch and git pull ?
+Answer: Both are basically used for integration but the main difference is with git fetch 
+        we have choice either use rebase, merge, or squash 
+        (GIT-PULL) The main difference is when we run the git pull while we in the same  
+        branch as the branch remote branch where we want to fetch the changes then the
+        remote changes will directly add into your local working directory
+        git pull fetches and merge those changes into your local branch
+        (GIT-FETCH) Git Pull will get the changes from the remote same branch (the branch
+        we are locally in) and add them into the local repository then we must need to
+        run git merge to apply changes so that they can be shown in working directory.
+        If you want to fetch changes but not immediately merge them, you can use git fetch
+Diagram: "./pull-vs-fetch.png"
+
+need to verify that how git fetch works if something changes on remote then what will be the result when run git fetch and what will be the result when there is no changes on remote
+Question for huwaiza : in the development face we are doing rebase and in the and in github we are doing squash and merge?
