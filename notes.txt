@@ -83,3 +83,92 @@ TEST 2st commit
 TEST 3st commit
 
 we can rollback commits by continuously doing undo last commit 
+
+************Discard Changes (git clean)**************
+
+git clean: cleans the working tree by recursively removing the files that are not 
+under version control and that refer as discarding in vs code
+
+SCI -> (clicked on untracked file) -> Discard Changes
+
+
+************Git Merge vs Rebase vs Squash**************
+
+Video Reference : https://www.youtube.com/watch?v=0chZFIZLR_0
+DiaGram : "./merge-vs-rebase-vs-squash.png"
+
+Git Merge: It connects connect the latest commit of features branch into the main branch by creating
+a new commit in the main branch
+From Video: It get the latest changes from the main branch and create a new Commit connecting both
+main and feature branch just like connecting a two ropes with a knot
+From Video
+
+(C0) --> (C1) --> (D) --> (E) --->(new Commit)   ===> Main Branch
+           |                        ^
+           |                        |
+           |------(A) --> (B) --> (C)     ===> feature Branch
+
+
+Git Rebase : It basically is a linear branch flow it changes the commit history of the main branch
+what it does is it connects the features branch to the main branch by by picking the features branch
+and connect the the first commit of the feature branch to the latest commit of the main branch
+and then the latest commit of the features branch becomes the latest commit of the main branch
+From Video: this gives us the straight forward linear commit history
+
+
+##### My understanding how git rebase works (correct) #####
+
+when we are in features/TNQ-11 and it's base branch is develop and make some 
+changes in features/TNQ-11 and then run (git rebase develop) what happened is?
+basically git will find the common ancestor commit of features/TNQ-11 and 
+develop from there git will temporarily remove the changes from the features/TNQ-11
+and apply all the latest changes from the develop branch into the features/TNQ-11 
+and on top of that it will again apply al the changes from the features/TNQ-11 
+which was removed temporarily before
+
+##### and when exactly conflicts occurs (correct) #####
+
+when git is trying to reapplies the changes of features/TNQ-11 into the 
+features/TNQ-11. Which was temporarily removed before applying the changes 
+of the develop branch into the features/TNQ-11 after applying the changes 
+from develop there might be a chance that we changed the that files which 
+was in the latest commit of the develop branch or changed by other developers 
+so there git don't knows which changes should apply either the changes from 
+the features/TNQ-11 or the remain the same changes that was in the develop 
+so there git will pause and generate a conflict
+
+
+(C0) --> (C1) --> (D) --> (E) -->(A) --> (B) --> (C)  ===> Main Branch
+          ^                       ^      ^      ^ 
+          |                      /      /      /
+          |                     /      /      /
+          |                    /      /      /
+          |                   /      /      /
+          |                  /      /      /
+          |                 /       /      /
+          |                /        /      /  
+          ---------------(A) --> (B) --> (C)     ===> feature Branch
+
+
+Git Squash (all is from video): Now when we want to integrate the features branch into the main branch we have two options
+git-merge but git-merge will create a too many knots which can make the history a bit massy and 
+other option is git-rebase by connecting the feature branch to the tip of main branch but by doing this
+we change the history
+So what happened in Squash merge is it squeeze the features branch commits and creates a 
+new commit at the tip of the main branch its kind of hybrid approach
+
+
+(C0) --> (C1) --> (D) --> (E) -->(new commit)  ===> Main Branch
+          ^                       ^        
+          |                       |      
+          |                       |     
+          |                       |    
+          |                       |   
+          |                       |---------------  
+          |                       |-------        |
+          |                       |       |       |
+          -----------------------(A) --> (B) --> (C)     ===> feature Branch
+
+
+so if we need the latest code into new branch then when should i do need to create a branch before rebasing the previous branch or after rebasing the 
+steps to rebase essentially if we are working within a team
