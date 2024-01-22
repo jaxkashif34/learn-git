@@ -6,3 +6,15 @@ some text
 some text 
 some text 
 some text 
+
+************Merge Conflicts**************
+
+1) when they might occur
+2) what they actually are
+3) How to solve them
+
+conflicts can also happened when rebasing, interactive rebasing, merging, cherry-pick, pull 
+and even applying stashes all of these action perform some kind of integrations
+
+Question : when exactly do conflicts occurs?
+Answer : most of the time git figures it out on its own!
