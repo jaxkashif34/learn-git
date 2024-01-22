@@ -177,8 +177,25 @@ Answer: 1) git fetch origin main-branch
         4) git push origin features (--force or --force-with-lease "to be safer")
         (git push --force-with-lease will only force push if your local copy of the remote branch is up-to-date)
         
-one solution is cherry-pick (will test later) if want the latest code from previous
-what are the steps I would follow in future If I face the same scenario again like want code from previous
+Question: what are the steps I would follow If I face the same scenario again like want code from previous?
+Answer: Main Branch (master) --> (TNQ-11) --> (TNQ-12)
+        Imagine I create a branch TNQ-11 from master and after completing work on TNQ-11 
+        I started working on TNQ-12 then after completing work on TNQ-12
+        Then I will use rebase commands to remove the commits of TNQ-11 from TNQ-12
+        by doing this its looks like TNQ-12 is created from master
+        
+        git checkout TNQ-12
+        git rebase --onto develop TNQ-11
+
+        Here's a step-by-step breakdown:
+        1)You're currently on the TNQ-12 branch, which includes commits from both 
+        TNQ-11 and TNQ-12.
+        2)You run git rebase --onto develop TNQ-11.
+        3)Git finds the common ancestor of TNQ-12 and TNQ-11, which is the commit 
+        where you branched TNQ-12 off from TNQ-11.
+        4)Git takes the changes made in the commits after this common ancestor 
+        (i.e., the changes you made on TNQ-12), and applies them on top of develop.
+
 
 Question: what is the difference between git fetch and git pull ?
 Answer: Both are basically used for integration but the main difference is with git fetch 
