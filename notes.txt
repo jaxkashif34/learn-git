@@ -192,5 +192,3 @@ Answer: Both are basically used for integration but the main difference is with 
         run git merge to apply changes so that they can be shown in working directory.
         If you want to fetch changes but not immediately merge them, you can use git fetch
 Diagram: "./pull-vs-fetch.png"
-
-need to verify that how git fetch works if something changes on remote then what will be the result when run git fetch and what will be the result when there is no changes on remote
