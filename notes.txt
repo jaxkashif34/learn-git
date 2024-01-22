@@ -194,4 +194,3 @@ Answer: Both are basically used for integration but the main difference is with 
 Diagram: "./pull-vs-fetch.png"
 
 need to verify that how git fetch works if something changes on remote then what will be the result when run git fetch and what will be the result when there is no changes on remote
-Question for huwaiza : in the development face we are doing rebase and in the and in github we are doing squash and merge?
