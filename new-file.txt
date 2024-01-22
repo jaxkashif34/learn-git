@@ -2,3 +2,5 @@
 some new file not too fancy
 
 some new text added
+
+just adding some additional text to add one more commit in branch-2 commit
