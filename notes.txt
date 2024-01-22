@@ -63,16 +63,6 @@ we can also see the inline view changes by going into version control icon ->
 (the file you want to see the changes) -> click on three horizontal dots top right side
 -> inline View
 
-************Git Amend (git commit --amend) (something I want to add in the last commit)**************
-
-this is for if we want to add a code that we want to add in the previous or last commit 
-but we commit the changes then git amend is used
-
-we can use this by doing the desire changes and then add them to the staging and then
-navigate to SCI -> HD -> commit -> Commit (Amend)
-
-(TEST text I'm adding to test the git commit --amend)
-
 
 ************Undo Last Commit (git update-ref)**************
 there might be a time you commit accidentally or too early and you want to undo it
