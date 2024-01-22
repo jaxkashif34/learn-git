@@ -17,4 +17,7 @@ conflicts can also happened when rebasing, interactive rebasing, merging, cherry
 and even applying stashes all of these action perform some kind of integrations
 
 Question : when exactly do conflicts occurs?
+
+some addition in middle of two lines
+
 Answer : most of the time git figures it out on its own!
